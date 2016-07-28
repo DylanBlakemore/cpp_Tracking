@@ -12,13 +12,14 @@
 #include <fstream>
 
 #include "../include/Vec3d.h"
+#include "../include/TrackEntry.h"
 
 /* Returns a vector of strings, with each entry being a line of the input csv file.
  *
  * 'filename' is the path to the csv file.
  */
 std::vector<std::string> loadCSV(const std::string& filename) {
-	std::ifstream csv_file(filename);
+	std::ifstream csv_file(filename.c_str());
 
 	std::string line;
 	std::vector<std::string> line_vec;
@@ -42,6 +43,7 @@ std::string getInput(const std::string prompt) {
 int main() {
 	std::string input_fname = getInput("Enter the path to the input .csv file: ");
 	std::vector<std::string> csv_line_vec = loadCSV(input_fname);
+	std::vector<TrackEntry*> entries_vec(csv_line_vec.size());
 
 	return 0;
 }

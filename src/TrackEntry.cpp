@@ -7,12 +7,4 @@
 
 #include "../include/TrackEntry.h"
 
-TrackEntry::TrackEntry() {
-	// TODO Auto-generated constructor stub
-
-}
-
-TrackEntry::~TrackEntry() {
-	// TODO Auto-generated destructor stub
-}
 
